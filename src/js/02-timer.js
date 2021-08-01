@@ -1,10 +1,10 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import 'flatpickr/dist/themes/light.css';
+
 import { Notify } from 'notiflix';
 import Tick from '@pqina/flip';
-
-console.log(Tick);
-// logs {supported: true, options: {…}, helper: {…}, data: {…}, DOM: {…}, …}
+import '@pqina/flip/dist/flip.min.css';
 
 // import
 
@@ -56,6 +56,7 @@ function onClick() {
       if (Math.floor(deltaTime / 1000) == 0) {
          clearInterval(intervalID);
          flatpickrInput.removeAttribute('readonly');
+         Notify.success('The promotion is over!!!');
       }
 
       const { days, hours, minutes, seconds } = convertMs(deltaTime);
