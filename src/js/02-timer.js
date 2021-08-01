@@ -1,5 +1,11 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import { Notify } from 'notiflix';
+import Tick from '@pqina/flip';
+
+console.log(Tick);
+// logs {supported: true, options: {…}, helper: {…}, data: {…}, DOM: {…}, …}
+
 // import
 
 const daysSpan = document.querySelector('[data-days]');
@@ -19,7 +25,8 @@ const options = {
    onClose(selectedDates) {
       let diff = selectedDates[0].getTime() - Date.now();
       if (diff <= 0) {
-         alert('Please choose a date in the future');
+         //   alert('Please choose a date in the future');
+         Notify.failure('Please choose a date in the future');
       } else {
          startBtn.disabled = false;
       }
