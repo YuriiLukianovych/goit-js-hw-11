@@ -23,7 +23,8 @@ img {
    margin-top: 50px;
    display: inline-flex;
    padding: 25px;
-   background-color: #ff6b02;
+   /* background-color: #ff6b02; */
+   background-color: #6e6e6e;
    border-radius: 40px;
 }
 .field {

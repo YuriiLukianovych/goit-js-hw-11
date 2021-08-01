@@ -1,6 +1,6 @@
 // ======================= Subtask 1 =======================
 const delay = ms => {
-  // Change this function
+   // Change this function
 };
 
 const logger = time => console.log(`Fulfilled after ${time}ms`);
@@ -12,17 +12,17 @@ delay(1500).then(logger); // Fulfilled after 1500ms
 
 // ======================= Subtask 2 =======================
 const users = [
-  { name: 'Mango', active: true },
-  { name: 'Poly', active: false },
-  { name: 'Ajax', active: false },
+   { name: 'Mango', active: true },
+   { name: 'Poly', active: false },
+   { name: 'Ajax', active: false },
 ];
 
 const toggleUserState = (allUsers, username, callback) => {
-  const updatedUsers = allUsers.map(user =>
-    user.name === username ? { ...user, active: !user.active } : user
-  );
+   const updatedUsers = allUsers.map(user =>
+      user.name === username ? { ...user, active: !user.active } : user,
+   );
 
-  callback(updatedUsers);
+   callback(updatedUsers);
 };
 
 // Currently the function works like this
@@ -35,29 +35,29 @@ const toggleUserState = (allUsers, username, callback) => {
 
 // ======================= Subtask 3 =======================
 const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
 const makeTransaction = (transaction, onSuccess, onError) => {
-  const delay = randomIntegerFromInterval(200, 500);
+   const delay = randomIntegerFromInterval(200, 500);
 
-  setTimeout(() => {
-    const canProcess = Math.random() > 0.3;
+   setTimeout(() => {
+      const canProcess = Math.random() > 0.3;
 
-    if (canProcess) {
-      onSuccess({ id: transaction.id, time: delay });
-    } else {
-      onError(transaction.id);
-    }
-  }, delay);
+      if (canProcess) {
+         onSuccess({ id: transaction.id, time: delay });
+      } else {
+         onError(transaction.id);
+      }
+   }, delay);
 };
 
 const logSuccess = ({ id, time }) => {
-  console.log(`Transaction ${id} processed in ${time}ms`);
+   console.log(`Transaction ${id} processed in ${time}ms`);
 };
 
 const logError = id => {
-  console.warn(`Error processing transaction ${id}. Please try again later.`);
+   console.warn(`Error processing transaction ${id}. Please try again later.`);
 };
 
 // Currently the function works like this
