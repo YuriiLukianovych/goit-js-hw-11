@@ -3,8 +3,6 @@ import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/light.css';
 
 import { Notify } from 'notiflix';
-import Tick from '@pqina/flip';
-import '@pqina/flip/dist/flip.min.css';
 
 // import
 
