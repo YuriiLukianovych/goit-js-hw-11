@@ -39,8 +39,8 @@ function onClick() {
    startBtn.disabled = true;
    // делает неактивным поле выбора даты после старта таймера
    const flatpickrInput = document.querySelector('.flatpickr-input');
-   flatpickrInput.setAttribute('readonly', true);
-   dateInput.setAttribute('readonly', true);
+   flatpickrInput.setAttribute('disabled', 'true');
+   dateInput.setAttribute('disabled', 'true');
 
    // start interval
    const intervalID = setInterval(() => {
@@ -50,8 +50,8 @@ function onClick() {
 
       if (Math.floor(deltaTime / 1000) == 0) {
          clearInterval(intervalID);
-         flatpickrInput.removeAttribute('readonly');
-         dateInput.removeAttribute('readonly');
+         flatpickrInput.removeAttribute('disabled');
+         dateInput.removeAttribute('disabled');
          Notify.success('The promotion is over!!!');
       }
 
