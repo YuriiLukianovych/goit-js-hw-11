@@ -40,6 +40,7 @@ function onClick() {
    // делает неактивным поле выбора даты после старта таймера
    const flatpickrInput = document.querySelector('.flatpickr-input');
    flatpickrInput.setAttribute('readonly', true);
+   dateInput.setAttribute('readonly', true);
 
    // start interval
    const intervalID = setInterval(() => {
@@ -50,6 +51,7 @@ function onClick() {
       if (Math.floor(deltaTime / 1000) == 0) {
          clearInterval(intervalID);
          flatpickrInput.removeAttribute('readonly');
+         dateInput.removeAttribute('readonly');
          Notify.success('The promotion is over!!!');
       }
 
