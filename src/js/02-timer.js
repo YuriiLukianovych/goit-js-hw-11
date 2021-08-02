@@ -1,9 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import 'flatpickr/dist/themes/light.css';
 
 import { Notify } from 'notiflix';
-
 // import
 
 const daysSpan = document.querySelector('[data-days]');
