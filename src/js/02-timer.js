@@ -41,7 +41,7 @@ function onClick() {
    startBtn.disabled = true;
    // делает неактивным поле выбора даты после старта таймера
    const flatpickrInput = document.querySelector(
-      '.flatpickr-input.flatpickr-mobile',
+      '.flatpickr-input'
    );
    flatpickrInput.setAttribute('readonly', true);
 
