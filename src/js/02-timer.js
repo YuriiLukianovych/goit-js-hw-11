@@ -40,9 +40,7 @@ function onClick() {
    // делает неактивной кнопку старта после запуска таймера
    startBtn.disabled = true;
    // делает неактивным поле выбора даты после старта таймера
-   const flatpickrInput = document.querySelector(
-      '.flatpickr-input'
-   );
+   const flatpickrInput = document.querySelector('.flatpickr-input');
    flatpickrInput.setAttribute('readonly', true);
 
    // start interval
@@ -62,7 +60,7 @@ function onClick() {
       hoursSpan.textContent = hours;
       minutesSpan.textContent = minutes;
       secondsSpan.textContent = seconds;
-      console.log(`${days}:${hours}:${minutes}:${seconds}`);
+      // console.log(`${days}:${hours}:${minutes}:${seconds}`);
    }, 1000);
 }
 //---------
@@ -71,10 +69,6 @@ function onClick() {
 //---------
 //---------
 //---------
-function stopTimer(timerID) {
-   clearInterval(timerID);
-   dateInput.setAttribute('readonly', false);
-}
 // функция для представления результата в двухзначном виде xx:xx:xx
 function addLeadingZero(value) {
    return String(value).padStart(2, '0');
