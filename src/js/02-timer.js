@@ -14,6 +14,7 @@ const startBtn = document.querySelector('[data-start]');
 
 // объект настроек flatpickr
 const options = {
+   disableMobile: true,
    enableTime: true,
    time_24hr: true,
    defaultDate: new Date(),
