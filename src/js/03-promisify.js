@@ -11,9 +11,9 @@ const delay = ms => {
 const logger = time => console.log(`Fulfilled after ${time}ms`);
 
 // Tests
-// delay(2000).then(logger); // Fulfilled after 2000ms
-// delay(1000).then(logger); // Fulfilled after 1000ms
-// delay(1500).then(logger); // Fulfilled after 1500ms
+delay(2000).then(logger); // Fulfilled after 2000ms
+delay(1000).then(logger); // Fulfilled after 1000ms
+delay(1500).then(logger); // Fulfilled after 1500ms
 
 // ======================= Subtask 2 =======================
 const users = [
@@ -72,7 +72,7 @@ const logError = id => {
 // makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 
 // The function should work like this
-// makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
-// makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
+makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
+makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
+makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
+makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
